@@ -71,7 +71,7 @@ export const confirmemail = asyncHandelr(
        
         const user = await dbservice.findOne({model:Usermodel ,filter:{email}})
         if (!user) {
-            return next(new Error("Email does not exist", { cause: 404 }));
+            return next(new Error("Email does not exist tmm", { cause: 404 }));
         }
 
         // التحقق إذا كان المستخدم في حالة حظر
