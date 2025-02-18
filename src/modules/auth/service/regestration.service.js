@@ -52,7 +52,7 @@ export const signup = asyncHandelr(async (req, res, next) => {
         data: { username, email, password: hashPassword, userId }
     });
 
-    // إرسال إيميل التأكيد
+  
     Emailevent.emit("confirmemail", { email });
 
     return successresponse(res, "User created successfully", 201, { user });
